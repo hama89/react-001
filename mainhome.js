@@ -13,15 +13,15 @@ export default function Mianhome() {
                </div>
           <div className='flex justify-end'>
              <div className="plate_info ">
-                <input type="text" className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64' placeholder='Plate Number... text'  />
+                <input type="text" className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64  bg-gray-200' placeholder='Plate Number... text'  />
                 <br/>
-                <button className='p-2 rounded-xl bg-gray-900  text-white m-2 w-64'>Reserve</button>
+                <button className='p-2 rounded-xl bg-gray-900  text-white m-2 w-64 text-2xl hover:bg-gray-600'>Reserve</button>
                 <br/>
-                <button className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64'>Cancle</button>
+                <button className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64 text-2xl hover:bg-gray-200 '>Cancle</button>
             </div>
          </div>    
       </div>
-      <div className='flex justify-center items-center w-92'>
+      <div className='flex justify-center items-center '>
       {/*<p className=' align-middle '>Parking Lots</p>*/}
         <div className='Card_Right  grid grid-rows-2 grid-cols-2 gap-8 w-full p-10'>
           <h1 className=' p-6 text-7xl bg-gray-900  m-2  rounded-2xl text-center text-white'>P-1</h1>
