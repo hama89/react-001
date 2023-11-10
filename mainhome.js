@@ -17,7 +17,7 @@ export default function Mianhome() {
                 <br/>
                 <button className='p-2 rounded-xl bg-gray-900  text-white m-2 w-64 text-2xl hover:bg-gray-600'>Reserve</button>
                 <br/>
-                <button className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64 text-2xl hover:bg-gray-200 '>Cancle</button>
+                <button className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64 text-2xl hover:bg-gray-200 '>cancel</button>
             </div>
          </div>    
       </div>
