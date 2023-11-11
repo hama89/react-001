@@ -1,7 +1,19 @@
 import React from 'react'
+import { useState } from 'react'
 
 export default function Mianhome() {
+
+  /*
+const[platenumber,setPlateNumber]=useState("");
+const[qrcodevalue,setQrCodeValue]=useState("");
+
+const generateQrCode=()=>
+{
+  setQrCodeValue(platenumber);
+};
+*/
   return (
+  
     <home >
       
     <div className='Home_Page flex justify-center items-center gap-50'>
@@ -13,21 +25,21 @@ export default function Mianhome() {
                </div>
           <div className='flex justify-end'>
              <div className="plate_info ">
-                <input type="text" className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64  bg-gray-200' placeholder='Plate Number... text'  />
+                <input type="text" className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64  bg-gray-200' placeholder='Plate Number... text' /**onChange={e=>setPlateNumber(e.target.value)}  *//>
                 <br/>
-                <button className='p-2 rounded-xl bg-gray-900  text-white m-2 w-64 text-2xl hover:bg-gray-600'>Reserve</button>
+                <input className='p-2 rounded-xl bg-gray-900  text-white m-2 w-64 text-2xl text-center hover:bg-gray-600' value="Reserve"  type='button' /**onClick={generateQrCode}*/ />
                 <br/>
-                <button className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64 text-2xl hover:bg-gray-200 '>cancel</button>
+                <input className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64 text-2xl text-center  hover:bg-gray-200 ' value="cancel"  type='button'/>
             </div>
          </div>    
       </div>
       <div className='flex justify-center items-center '>
       {/*<p className=' align-middle '>Parking Lots</p>*/}
         <div className='Card_Right  grid grid-rows-2 grid-cols-2 gap-8 w-full p-10'>
-          <h1 className=' p-6 text-7xl bg-gray-900  m-2  rounded-2xl text-center text-white'>P-1</h1>
-          <h1 className=' p-6 text-7xl bg-gray-900  m-2  rounded-2xl text-center text-white'>P-2</h1>
-          <h1 className=' p-6 text-7xl bg-gray-900  m-2  rounded-2xl text-center text-white'>P-3</h1>
-          <h1 className=' p-6 text-7xl bg-gray-900  m-2  rounded-2xl text-center text-white'>P-4</h1>
+          <h1 className=' p-6 text-7xl bg-gray-300  m-2  rounded-2xl text-center text-gray-400 '>P-1</h1>
+          <h1 className=' p-6 text-7xl bg-gray-300  m-2  rounded-2xl text-center text-gray-400'>P-2</h1>
+          <h1 className=' p-6 text-7xl bg-gray-300  m-2  rounded-2xl text-center text-gray-400'>P-3</h1>
+          <h1 className=' p-6 text-7xl bg-gray-300  m-2  rounded-2xl text-center text-gray-400'>P-4</h1>
         </div>
       </div>
    </div>

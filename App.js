@@ -9,14 +9,15 @@ import Mianhome from "./mainhome";
 
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
-function App() {
+
+function App(props) {
+
   return (
     <div className="App">
-
       <BrowserRouter>
       <NavBR />
         <Routes>
-          <Route path="/" element={<Mianhome />}/>
+          <Route path="/Home" element={<Mianhome  />}/>
           <Route path="/Myreservation" element={<Myreservation />}/>
           <Route path="/Aboutus" element={<Aboutus />}/>
           <Route path="*" element={<P404 />}/>
