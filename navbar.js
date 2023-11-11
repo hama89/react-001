@@ -11,7 +11,7 @@ const NavBar = () => {
         <div>
           <ul className="flex space-x-3">
            
-            <li> <Link className="text-indigo-50  hover:bg-gray-600 p-1 rounded-sm" to={"/Home"}> Home</Link>   </li>
+            <li> <Link className="text-indigo-50  hover:bg-gray-600 p-1 rounded-sm" to={"/"}> Home</Link>   </li>
             <li> <Link className="text-indigo-50 hover:bg-gray-600 p-1 rounded-sm" to={"/Myreservation"}> My Reservation</Link>   </li>
             <li> <Link className="text-indigo-50 hover:bg-gray-600 p-1 rounded-sm" to={"/Aboutus"}> About Us</Link>   </li>
             

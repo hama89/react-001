@@ -1,21 +1,20 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react';
 
-export default function Mianhome() {
 
-  /*
-const[platenumber,setPlateNumber]=useState("");
-const[qrcodevalue,setQrCodeValue]=useState("");
-
-const generateQrCode=()=>
-{
-  setQrCodeValue(platenumber);
-};
-*/
-  return (
+export default function Mianhome({onInputChange,onGenerateClick }) {
   
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setInputValue(value);
+    onInputChange(value); // Pass the data to the parent component
+  };
+
+  
+  return (
     <home >
-      
     <div className='Home_Page flex justify-center items-center gap-50'>
       <div className='All_Right  p-10 flex justify-end flex-col items-end'>
               <div className='big_right_number_And_its_Text flex flex-col justify-center items-center  '>
@@ -23,14 +22,16 @@ const generateQrCode=()=>
                 <h1 className=' p-6 text-9xl bg-gray-900  m-2 w-64 rounded-2xl text-center text-white'>0</h1>
                 <br/>
                </div>
+
           <div className='flex justify-end'>
              <div className="plate_info ">
-                <input type="text" className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64  bg-gray-200' placeholder='Plate Number... text' /**onChange={e=>setPlateNumber(e.target.value)}  *//>
+                <input type="text" className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64  bg-gray-200' value={inputValue}  placeholder='Plate Number... text' onChange={handleChange} />
                 <br/>
-                <input className='p-2 rounded-xl bg-gray-900  text-white m-2 w-64 text-2xl text-center hover:bg-gray-600' value="Reserve"  type='button' /**onClick={generateQrCode}*/ />
+                <input className='p-2 rounded-xl bg-gray-900  text-white m-2 w-64 text-2xl text-center hover:bg-gray-600' value="Reserve"  type='button' onClick={onGenerateClick} />
                 <br/>
                 <input className='p-2 rounded-xl border-2 text-gray-400 m-2 w-64 text-2xl text-center  hover:bg-gray-200 ' value="cancel"  type='button'/>
             </div>
+
          </div>    
       </div>
       <div className='flex justify-center items-center '>
